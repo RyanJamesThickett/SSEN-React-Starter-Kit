@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+
+// FIND YOUR TOKEN TO PUT HERE ON THIS SITE: https://nerda.ssen.co.uk/nerda
+// (You DO need to log in! and it's the short term key)
 const headers = {
 	"Authorization": "Bearer <TOKEN>"
 }
@@ -17,11 +20,11 @@ export default defineConfig({
 			}
 		}
 	},
-  plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
-  ],
+	plugins: [
+		react({
+			babel: {
+				plugins: [['babel-plugin-react-compiler']],
+			},
+		}),
+	],
 })
