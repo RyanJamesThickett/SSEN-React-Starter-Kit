@@ -1,5 +1,7 @@
 import './App.css'
 import { useQuery } from '@tanstack/react-query'
+import logo from './assets/hp-logo-white.png'
+
 
 function App() {
 	const query = useQuery({
@@ -13,6 +15,16 @@ function App() {
 
 	return (
 		<div>
+			<img
+				src={logo}
+				alt="Hack Pompey"
+				style={{
+					width: 200,
+					height: "auto",
+					display: "block",
+					margin: "0 auto 24px auto"
+				}}
+			/>
 			<h1>SSEN</h1>
 			{query.isLoading && <div>Loading...</div>}
 			{query.isError && <div>Error: {query.error.message}</div>}
